@@ -51,93 +51,27 @@
         <div class="tab-content">
           <div class="tab-pane active" id="featured">
             <!-- Card View Start -->
-            <div class="row">
-              <div class="col-md-6">
-                <div class="single-job-post">
-                  <div class="address">
-                    <h6>Online English Teachers</h6>
-                    <p>Publisher : Company Name</p>
-                    <p>In : Teacher</p>
-                    <p>Date : 14.05.2018</p>
-                    <p>Location : Dhaka</p>
-                  </div>
-                  <div class="button-box">
-                    <a href="#" class="button button-black">APPLY NOW</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="single-job-post">
-                  <div class="address">
-                    <h6>Online English Teachers</h6>
-                    <p>Publisher : Company Name</p>
-                    <p>In : Teacher</p>
-                    <p>Date : 14.05.2018</p>
-                    <p>Location : Dhaka</p>
-                  </div>
-                  <div class="button-box">
-                    <a href="#" class="button button-black">APPLY NOW</a>
-                  </div>
-                </div>
-              </div>
+{% for obj in card %}
+<div class="row">
+  <div class="col-md-6">
+    <div class="single-job-post">
+      <div class="address">
+        <h6>{{obj.company_name}}</h6>
+        <p></p>
+        <p>In : Teacher</p>
+        <p>Date : 14.05.2018</p>
+        <p>Location : Dhaka</p>
+      </div>
+      <div class="button-box">
+        <a href="#" class="button button-black">APPLY NOW</a>
+      </div>
+    </div>
+  </div>
+ 
+</div>
+{% endfor %}
 
-              <div class="col-md-6">
-                <div class="single-job-post">
-                  <div class="address">
-                    <h6>Online English Teachers</h6>
-                    <p>Publisher : Company Name</p>
-                    <p>In : Teacher</p>
-                    <p>Date : 14.05.2018</p>
-                    <p>Location : Dhaka</p>
-                  </div>
-                  <div class="button-box">
-                    <a href="#" class="button button-black">APPLY NOW</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="single-job-post">
-                  <div class="address">
-                    <h6>Online English Teachers</h6>
-                    <p>Publisher : Company Name</p>
-                    <p>In : Teacher</p>
-                    <p>Date : 14.05.2018</p>
-                    <p>Location : Dhaka</p>
-                  </div>
-                  <div class="button-box">
-                    <a href="#" class="button button-black">APPLY NOW</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="single-job-post">
-                  <div class="address">
-                    <h6>Online English Teachers</h6>
-                    <p>Publisher : Company Name</p>
-                    <p>In : Teacher</p>
-                    <p>Date : 14.05.2018</p>
-                    <p>Location : Dhaka</p>
-                  </div>
-                  <div class="button-box">
-                    <a href="#" class="button button-black">APPLY NOW</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="single-job-post">
-                  <div class="address">
-                    <h6>Online English Teachers</h6>
-                    <p>Publisher : Company Name</p>
-                    <p>In : Teacher</p>
-                    <p>Date : 14.05.2018</p>
-                    <p>Location : Dhaka</p>
-                  </div>
-                  <div class="button-box">
-                    <a href="#" class="button button-black">APPLY NOW</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
             <!-- Card View End -->
           </div>
         </div>
