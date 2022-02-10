@@ -43,19 +43,19 @@ NOTE: This is Header style file. All Header related style included in this file.
 /*social link area*/
 .social-links a {
   background: transparent none repeat scroll 0 0;
-  /* border: 1px solid #fff; */
+  border: 1px solid #fff;
   border-radius: 100%;
   color: #fff;
   display: inline-block;
   height: 31px;
-  margin: 8px 16px;
+  margin: 8px 5px;
   text-align: center;
   transition: all 0.3s ease 0s;
-  width: 25px;
+  width: 31px;
 }
 .social-links a:last-child {margin-right: 0;}
 .social-links a i {font-size: 14px; line-height: 31px;}
-/* .social-links a:hover{background: #ffffff; color: #26ae61} */
+.social-links a:hover{background: #ffffff; color: #26ae61}
 /*menu style */
 .header-area{z-index: 10; position: relative;}
 nav#primary-menu {display: inline-block; float: left;}
