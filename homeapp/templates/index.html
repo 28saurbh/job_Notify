@@ -1,35 +1,16 @@
 {% extends 'base.html' %} {% load static %} {% block title %}
 <title>Job Board || JobHere</title>
-{% endblock title %} {% block content %}
+{% endblock title %} 
+
+
+{% block content %}
 
 <div class="as-mainwrapper">
 
-  <!--Header Area Start-->
-  <header id="sticky-header" class="header-area">
-    <!-- Header Top Start -->
-    <div class="header-top">
-      <div class="container">
-        <div class="col-md-12">
-          <div class="header-top-list">
-            <ul class="top-contact-list">
-              <li><a href="tel:+917470946424">Call Us: +917470946424</a></li>
-              <li><a href="mailto: perpendicularprogramming@gmail.com">Email: perpendicularprogramming@gmail.com</a></li>
-            </ul>
-            <div class="social-links">
-              <a href="#"><i class="zmdi zmdi-linkedin-box"></i></a>
-              <a href="#"><i class="zmdi zmdi-github"></i>  </a>
-              <a href="#"><i class="zmdi zmdi-google-drive"></i>  </a>
-              <a href="https://chat.whatsapp.com/K3SeWkLrRpbGaDAddzKKsd"><i class="zmdi zmdi-whatsapp"></i>  </a>
-              <a href="#"><i class="zmdi zmdi-instagram"></i> </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Header Top End -->
-    
-  </header>
-  <!-- End of Header Area -->
+
+
+
+  
 
 <!--Breadcrumb Banner Area Start-->
 <div class="breadcrumb-banner-area pt-94 pb-85 bg-3">
@@ -59,6 +40,32 @@
         <div class="tab-content">
           <div class="tab-pane active" id="featured">
             <!-- Card View Start -->
+
+            <div class="row">
+              {% for obj in card %}
+
+                <div class="col-md-6">
+                  <div class="single-job-post">
+                    <div class="address">
+                      <h4>Company : {{obj.company_name}}</h4>
+                      <hr>
+                      </br>
+                  
+                      <p>Position : {{obj.position}}</p>
+                      <p>Salary : {{obj.salary}}</p>
+                      <p>Batch :{{obj.batch}}</p>
+                      <p>Degree : {{obj.degree}}</p>
+                      <p>Last Date : {{obj.last_date}}</p>
+                      <p>Location : {{obj.location}}</p>
+                    </div>
+                    <div class="button-box">
+                      <a href="/blog/{{obj.slug}}" class="button button-black">APPLY NOW</a>
+                    </div>
+                  </div>
+                </div>
+
+              {% endfor %}
+            </div>
 
         <div class="row">
           {% for obj in card %}           <!-- For start -->
@@ -112,8 +119,9 @@
         </div>
 
 
+
             
-            <!-- Card View End -->
+          <!-- Card View End -->
 
         </div>
       </div>
