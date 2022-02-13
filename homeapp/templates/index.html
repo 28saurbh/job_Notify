@@ -7,13 +7,8 @@
 
 <div class="as-mainwrapper">
 
-
-
-
-  
-
 <!--Breadcrumb Banner Area Start-->
-<div class="breadcrumb-banner-area pt-94 pb-85 bg-3">
+<div class="breadcrumb-banner-area pt-94 pb-85 bg-3" style="margin-top: 4px;">
   <div class="container">
     <div class="post-tab nav">
       <!-- <a class="nav-link" data-bs-toggle="tab" href="#featured">FEATURED JOBS</a>
@@ -41,32 +36,6 @@
           <div class="tab-pane active" id="featured">
             <!-- Card View Start -->
 
-            <div class="row">
-              {% for obj in card %}
-
-                <div class="col-md-6">
-                  <div class="single-job-post">
-                    <div class="address">
-                      <h4>Company : {{obj.company_name}}</h4>
-                      <hr>
-                      </br>
-                  
-                      <p>Position : {{obj.position}}</p>
-                      <p>Salary : {{obj.salary}}</p>
-                      <p>Batch :{{obj.batch}}</p>
-                      <p>Degree : {{obj.degree}}</p>
-                      <p>Last Date : {{obj.last_date}}</p>
-                      <p>Location : {{obj.location}}</p>
-                    </div>
-                    <div class="button-box">
-                      <a href="/blog/{{obj.slug}}" class="button button-black">APPLY NOW</a>
-                    </div>
-                  </div>
-                </div>
-
-              {% endfor %}
-            </div>
-
         <div class="row">
           {% for obj in card %}           <!-- For start -->
           <div class="col-md-6">
@@ -85,12 +54,14 @@
               </div>
 
               <div class="button-box">
-                <a href="{{obj.apply_link}}" class="button button-black">APPLY NOW</a>
+                <a href="/blog/{{obj.slug}}" class="button button-black">APPLY NOW</a>
               </div>
             </div>
             
           </div>
           {% endfor %}                <!-- For End -->
+
+            
 
             <!-- Pagination Start : Bootstrap -->
 
@@ -112,16 +83,12 @@
               </ul>
             </nav>
 
-    
-
             <!-- Pagination End : Bootstrap-->
 
         </div>
 
-
-
             
-          <!-- Card View End -->
+        <!-- Card View End -->
 
         </div>
       </div>
