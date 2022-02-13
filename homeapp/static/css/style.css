@@ -1107,3 +1107,7 @@
   .box-layout .sticky {
     max-width: 1340px;
   }
+
+  .logo a {
+    background : white;
+}

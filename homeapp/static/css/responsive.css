@@ -871,6 +871,11 @@
         padding-top: 0;
         padding-bottom: 24px;
    }
+   .address p, hr {
+    display : none;
+}
+    
+
    .modal-dialog button.close {
    right: 0;
 }
@@ -936,3 +941,4 @@
         margin-top: 0px;
    }
 }
+

@@ -31,36 +31,44 @@
   </header>
   <!-- End of Header Area -->
 
+<!--Breadcrumb Banner Area Start-->
+<div class="breadcrumb-banner-area pt-94 pb-85 bg-3">
+  <div class="container">
+    <div class="post-tab nav">
+      <!-- <a class="nav-link" data-bs-toggle="tab" href="#featured">FEATURED JOBS</a>
+      <a class="nav-link" data-bs-toggle="tab" href="#featured">PART TIME</a>
+      <a class="nav-link" data-bs-toggle="tab" href="#recent_job">FULL TIME</a> -->
+      <div class="logo">
+        <a href="index.html"
+          ><img src="{% static 'images/logo/logo.png' %}" alt="JobHere"
+        /></a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!--End of Breadcrumb Banner Area-->
+
   <!--Start of Job Post Area-->
   <div class="job-post-area ptb-130 ptb-sm-60">
     <div class="container">
       <div class="all-job-post">
         <!-- Nav tabs -->
-        <div class="post-tab nav">
-          <!-- <a class="nav-link" data-bs-toggle="tab" href="#featured">FEATURED JOBS</a>
-          <a class="nav-link" data-bs-toggle="tab" href="#featured">PART TIME</a>
-          <a class="nav-link" data-bs-toggle="tab" href="#recent_job">FULL TIME</a> -->
-          <div class="logo">
-            <a href="index.html"
-              ><img src="{% static 'images/logo/logo.png' %}" alt="JobHere"
-            /></a>
-          </div>
-    
-        </div>
+
         <!-- Tab panes -->
         <div class="tab-content">
           <div class="tab-pane active" id="featured">
             <!-- Card View Start -->
 
         <div class="row">
-          {% for obj in card %}
+          {% for obj in card %}           <!-- For start -->
           <div class="col-md-6">
-            <div class="single-job-post">
+            <div class="single-job-post">     
               <div class="address">
-                <h4>Company Name : {{obj.company_name}}</h4>
+                <h4>Company : {{obj.company_name}}</h4></span>
                 <hr>
                 </br>
-             
+               
                 <p>Position : {{obj.position}}</p>
                 <p>Salary : {{obj.salary}}</p>
                 <p>Batch :{{obj.batch}}</p>
@@ -68,12 +76,39 @@
                 <p>Last Date : {{obj.last_date}}</p>
                 <p>Location : {{obj.location}}</p>
               </div>
+
               <div class="button-box">
                 <a href="{{obj.apply_link}}" class="button button-black">APPLY NOW</a>
               </div>
             </div>
+            
           </div>
-          {% endfor %}
+          {% endfor %}                <!-- For End -->
+
+            <!-- Pagination Start : Bootstrap -->
+
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-between">
+                {% if card.has_previous %}    <!-- For Previous -->
+                <li class="page-item">
+                  <a class="page-link button button-black" href="?page={{card.previous_page_number}}" tabindex="-1"> &lt;&lt; Previous</a>
+                </li>
+                {% endif %}
+                
+                <li class="page-item"><a class="page-link button button-black" href="?page={{card.number}}"> &lt;&lt; Current Page &gt;&gt;</a></li>
+                
+                {% if card.has_next %}        <!-- For Next -->
+                <li class="page-item">
+                  <a class="page-link page-link button button-black" href="?page={{card.next_page_number}}">Next &gt;&gt;</a>
+                </li>
+                {% endif %}
+              </ul>
+            </nav>
+
+    
+
+            <!-- Pagination End : Bootstrap-->
+
         </div>
 
 
@@ -110,7 +145,7 @@
             <div class="row">
                 <div class="col-lg-3 col-md-5">
                     <div class="single-footer-widget">
-                        <h3 class="text-white mb-26">GET IN TOUCH</h3>
+                        <h3 class="text-white mb-26">Get In Touch</h3>
                         <ul class="footer-list">
                           <li><a href="#">+91 7470946424</a></li>
                           <li><a href="#">+91 8719963681</a></li>
@@ -124,9 +159,9 @@
                     <div class="single-footer-widget">
                         <h3 class="text-white mb-21">By Regions</h3>
                         <ul class="footer-list">
-                            <li><a href="#">Sudia Region</a></li>
-                            <li><a href="#">North America</a></li>
-                            <li><a href="#">Africa</a></li>
+                            <li><a href="#">Eurasia Region</a></li>
+                            <li><a href="#">America Region</a></li>
+                            <li><a href="#">Africa Region</a></li>
                             
                         </ul>
                     </div>
@@ -136,19 +171,19 @@
                         <h3 class="text-white mb-21">Job Types</h3>
                         <ul class="footer-list">
                             <li><a href="#">Full Time Job</a></li>
+                            <li><a href="#">Internship Job</a></li>
                             <li><a href="#">Part Time Job</a></li>
-                            <li><a href="#">Temporary Job</a></li>
                        
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-4">
                     <div class="single-footer-widget">
-                        <h3 class="text-white mb-21">Keyword By Jobs</h3>
+                        <h3 class="text-white mb-21">Search More For</h3>
                         <ul class="footer-list">
-                            <li><a href="#">Graphic Designer</a></li>
-                            <li><a href="#">HTML Designer</a></li>
-                            <li><a href="#">WP Developer</a></li>
+                            <li><a href="#">Recent Jobs</a></li>
+                            <li><a href="#">Courses</a></li>
+                            <li><a href="#">Articles</a></li>
                         
                         </ul>
                     </div>
@@ -163,9 +198,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="footer-text">
-                        <span class="text-white block">&copy; 2021 <span> Jobhere </span> Made with <i
-                                class="fa fa-heart"></i> by <a
-                                href="https://hasthemes.com/">HasThemes</a></span>
+                        <span class="text-white block">&copy; 2022 <span> Perpendicular Programming all rights reserved </span>
                     </div>
                 </div>
             </div>
