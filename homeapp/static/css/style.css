@@ -583,7 +583,7 @@
   }
   .mark-icon, .number {line-height: 28px; position: relative;}
   .mark-icon:after {
-    content: "ï‰©";
+    content: "";
     font-family: "Material-Design-Iconic-Font";
     font-size: 18px;
     left: 0;

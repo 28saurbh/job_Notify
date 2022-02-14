@@ -21,9 +21,9 @@ class Blog_Model(models.Model):
     company_name = models.CharField(max_length=50, blank=False)
     slug = models.CharField(max_length=50, blank=False, unique=True)
     content = models.TextField()
-    # Skill_des = models.TextField()
-    # min_qulification = models.TextField()
-    # how_to_apply = models.TextField()
+    Skill_des = models.TextField()
+    min_qulification = models.TextField()
+    how_to_apply = models.TextField()
 
 
     def __str__(self):
