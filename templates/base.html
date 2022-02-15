@@ -2,29 +2,53 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <!-- Required meta tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Static / Main CSS -->
+        <!-- favicon
+        ============================================ -->        
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+        
+        <!-- Google Fonts
+        ============================================ -->        
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+        
+        <!-- All css files are included here
+        ============================================ -->    
+        <!-- Bootstrap CSS
+        ============================================ -->        
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+        
+        <!-- This core.css file contents all plugins css file
+        ============================================ -->
+        <!-- Nice select css
+        ============================================ -->
 
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+        <!-- <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" />  -->
 
-    <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/core.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/shortcode/shortcodes.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/plugins/color.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
-    <link rel="stylesheet" href="{% static 'lib/nivo-slider/css/nivo-slider.css' %}" />
-    <link rel="stylesheet" href="{% static 'lib/nivo-slider/css/preview.css' %}" />
+        <!-- Theme shortcodes/elements style
+        ============================================ -->  
+        <link rel="stylesheet" href="{% static 'css/shortcode/shortcodes.css' %}">
 
-    <link rel="stylesheet" href="{% static 'css/material-design-iconic-font.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/material-design-iconic-font.min.css' %}"/>
+        <!--  Theme main style
+        ============================================ -->  
+        <link rel="stylesheet" href="{% static 'css/style.css'%}">
 
+        <!-- Color CSS
+        ============================================ -->
+        <!-- <link rel="stylesheet" href="{% static 'css/plugins/color.css'%}"> -->
+        
+        <!-- This core.css file contents all plugins css file
+        ============================================ -->
+        <link rel="stylesheet" href="{% static 'css/core.css' %}">
 
-    <!-- ShortCode CSS -->
+                <!-- Responsive CSS
+        ============================================ -->
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}" />
+
 
     <!-- Title Here -->
     {% block title %} {% endblock title %}

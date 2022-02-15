@@ -11,9 +11,11 @@
 <div class="breadcrumb-banner-area pt-94 pb-85 bg-3" style="margin-top: 4px;">
   <div class="container">
     <div class="post-tab nav">
+
       <!-- <a class="nav-link" data-bs-toggle="tab" href="#featured">FEATURED JOBS</a>
       <a class="nav-link" data-bs-toggle="tab" href="#featured">PART TIME</a>
       <a class="nav-link" data-bs-toggle="tab" href="#recent_job">FULL TIME</a> -->
+
       <div class="logo">
         <a href="index.html"
           ><img src="{% static 'images/logo/logo.png' %}" alt="JobHere"
@@ -28,14 +30,15 @@
   <!--Start of Job Post Area-->
   <div class="job-post-area ptb-130 ptb-sm-60">
     <div class="container">
+      <li class="text-dark mb-4"><a style="color: black;"> &lt;&lt; Current Page: {{card.number}} &gt;&gt;</a></li>
       <div class="all-job-post">
         <!-- Nav tabs -->
 
         <!-- Tab panes -->
+
         <div class="tab-content">
           <div class="tab-pane active" id="featured">
             <!-- Card View Start -->
-
         <div class="row">
           {% for obj in card %}           <!-- For start -->
           <div class="col-md-6">
@@ -54,7 +57,7 @@
               </div>
 
               <div class="button-box">
-                <a href="/blog/{{obj.slug}}" class="button button-black">APPLY NOW</a>
+                <a href="/blog/{{obj.slug}}"  target = "_blank" class="button button-black">APPLY NOW</a>
               </div>
             </div>
             
@@ -66,14 +69,12 @@
             <!-- Pagination Start : Bootstrap -->
 
             <nav aria-label="Page navigation example">
-              <ul class="pagination justify-content-between">
+              <ul class="pagination justify-content-around">
                 {% if card.has_previous %}    <!-- For Previous -->
                 <li class="page-item">
                   <a class="page-link button button-black" href="?page={{card.previous_page_number}}" tabindex="-1"> &lt;&lt; Previous</a>
                 </li>
                 {% endif %}
-                
-                <li class="page-item"><a class="page-link button button-black" href="?page={{card.number}}"> &lt;&lt; Current Page &gt;&gt;</a></li>
                 
                 {% if card.has_next %}        <!-- For Next -->
                 <li class="page-item">

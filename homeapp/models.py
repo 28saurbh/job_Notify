@@ -24,6 +24,7 @@ class Blog_Model(models.Model):
     Skill_des = models.TextField()
     min_qulification = models.TextField()
     how_to_apply = models.TextField()
+    link = models.URLField(max_length=200, null = True)
 
 
     def __str__(self):
