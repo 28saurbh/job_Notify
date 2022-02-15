@@ -27,13 +27,10 @@
         <!-- Nice select css
         ============================================ -->
         <link rel="stylesheet" href="{% static 'css/nice-select.css' %}" />
-        <!-- This core.css file contents all plugins css file
-        ============================================ -->
-        <link rel="stylesheet" href="{% static 'blog_css/css/core.css' %}">
         
         <!-- Theme shortcodes/elements style
         ============================================ -->  
-        <link rel="stylesheet" href="{% static 'blog_css/css/shortcode/shortcodes.css' %}">
+        <link rel="stylesheet" href="{% static 'css/shortcode/shortcodes.css' %}">
         
         <!--  Theme main style
         ============================================ -->  
@@ -41,7 +38,12 @@
         
         <!-- Color CSS
         ============================================ -->
-        <link rel="stylesheet" href="{% static 'blog_css/css/plugins/color.css'%}">
+        <link rel="stylesheet" href="{% static 'css/plugins/color.css'%}">
+
+        
+        <!-- This core.css file contents all plugins css file
+        ============================================ -->
+        <link rel="stylesheet" href="{% static 'css/core.css' %}">
         
         <!-- Responsive CSS
         ============================================ -->
@@ -129,7 +131,7 @@
                                                 <p>Batch : {{card.batch}}</p>
                                                 <p>Loc. : {{card.location}}</p>
                                             </div>
-                                            <div class="button-box"><a href="#" class="button button-black">APPLY NOW</a></div>
+                                            <div class="button-box"><a href="{{blog.link}}" target = "_blank" class="button button-black">APPLY NOW</a></div>
                                         </div> 
                                     </div>
                                     <div class="title"><span>job description</span></div>
