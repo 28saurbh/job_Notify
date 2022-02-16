@@ -52,15 +52,15 @@
     color: #696969;
     font-family: montserratregular;
     font-size: 14px;
-    padding: 18px 22px;
+    /* padding: 18px 22px; */
     transition: all 0.3s ease-in-out;
     border-left: none;
   }
-  .post-tab a.active,.post-tab a:hover{
+  /* .post-tab a.active,.post-tab a:hover{
       background:#26ae61;
       color: #fff;
       border-color: #26ae61;
-  }
+  } */
   .post-tab a:last-child{
   
       border-radius: 0 14px 14px 0;
