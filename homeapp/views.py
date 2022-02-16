@@ -29,6 +29,10 @@ def index(request):
 def blog_page(request, slug):
     blog = Blog_Model.objects.get(slug = slug)
     card = Card_Model.objects.get(slug = slug)
+
+    blog.views = blog.views + 1
+    blog.save()
+    
     context = {
         "blog" : blog,
         "card": card,
