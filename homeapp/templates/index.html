@@ -109,8 +109,11 @@
                 </div>
                 <div class="col-md-6">
                     <div class="subscribe-form">
-                        <input type="email" name="email" id="eamil" placeholder="Enter Your Email.....">
-                        <button>Submit</button>
+                      <form action="" method="POST" class="subscribe-form">
+                          {% csrf_token %}
+                          <input type="mail" id="eamil" placeholder="Enter Your Email..." name="email" >
+                          <button type="submit" value="Submit">Submit</button>
+                      </form>
                     </div>
                 </div>
             </div>
@@ -123,9 +126,9 @@
                     <div class="single-footer-widget">
                         <h3 class="text-white mb-26">Get In Touch</h3>
                         <ul class="footer-list">
-                          <li><a href="#">+91 7470946424</a></li>
-                          <li><a href="#">+91 8719963681</a></li>
-                          <li><a href="#">+91 8251023881</a></li>
+                          <li><a href="tel:+917470946424">+91 7470946424</a></li>
+                          <li><a href="tel:+91871963681">+91 8719963681</a></li>
+                          <li><a href="tel:+918251023881">+91 8251023881</a></li>
                       </ul>
                     </div>
                   
@@ -135,7 +138,7 @@
                     <div class="single-footer-widget">
                         <h3 class="text-white mb-21">By Regions</h3>
                         <ul class="footer-list">
-                            <li><a href="#">Eurasia Region</a></li>
+                            <li><a href="/">Eurasia Region</a></li>
                             <li><a href="#">America Region</a></li>
                             <li><a href="#">Africa Region</a></li>
                             

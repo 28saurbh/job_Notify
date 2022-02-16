@@ -1,6 +1,10 @@
 from pyexpat import model
 from django.db import models
+
 from django.forms import IntegerField
+
+from django.forms import forms
+
 # from tinymce.models import HTMLField
 
 class Card_Model(models.Model):
@@ -32,3 +36,8 @@ class Blog_Model(models.Model):
     def __str__(self):
         return self.company_name
 
+class ContactModel(models.Model):
+    email = models.EmailField(max_length=50)    
+               
+    def __str__(self):
+        return self.email
