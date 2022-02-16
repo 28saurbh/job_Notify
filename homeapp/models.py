@@ -1,5 +1,6 @@
 from pyexpat import model
 from django.db import models
+from django.forms import IntegerField
 # from tinymce.models import HTMLField
 
 class Card_Model(models.Model):
@@ -25,6 +26,7 @@ class Blog_Model(models.Model):
     min_qulification = models.TextField()
     how_to_apply = models.TextField()
     link = models.URLField(max_length=200, null = True)
+    views = models.IntegerField(default=0)
 
 
     def __str__(self):
